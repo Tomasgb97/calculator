@@ -1,3 +1,30 @@
+@media only screen and (min-width: 600px){
+
+    #html{
+        font-size: 1px;
+    }
+}
+
+@font-face{
+    font-family: myfont;
+    src: url(fonts/disposabledroid-bb/DisposableDroidBB.ttf);
+}
+@font-face{
+    font-family: sketch;
+    src: url(fonts/sketch-3d/Sketch\ 3D.woff);
+}
+#html{
+
+    font-size: 16px;
+}
+#header{
+
+    font-family: sketch;
+    font-size: 6rem;
+    position: absolute;
+    left: 40rem;
+}
+
 #body{
     background-color: #E5E5F7;
     background-size: 40px 40px;
@@ -8,15 +35,101 @@
 #calcucontainer{
 
     background-color: #969696;
-background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
     opacity: 1;
     border-radius: 10px;
     display: grid;
     width: 30rem;
     height: 40rem;
-    position: absolute;
-    right: 45rem;
+    position: relative;
+    left: 46rem;
     top: 15rem;
     transform: rotate3d(1, 1, 1, 346deg);
     box-shadow: -9px 10px 5px 0px rgba(0,0,0,0.75);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.3fr 0.9fr 0.9fr 0.9fr 0.9fr;
+    gap: 3px 3px;
+    border: solid;
+}
+#display { grid-area: 1 / 1 / 2 / 5;
+background-color: rgba(0, 0, 255, 0.322);
+border-radius: 20px;
+height: 6rem;
+width: 20rem;
+margin: auto;
+margin-right: 9rem;
+transform: rotate3d(1, 1, 1, 359deg);
+box-shadow:  inset -5px -5px 50px -25px rgba(0,0,0,1);
+display: flex;
+justify-content: end;
+border: solid;
+}
+#uno { grid-area: 2 / 1 / 3 / 2; ;}
+#dos { grid-area: 2 / 2 / 3 / 3; }
+#tres { grid-area: 2 / 3 / 3 / 4; }
+#cuatro { grid-area: 3 / 1 / 4 / 2; }
+#cinco { grid-area: 3 / 2 / 4 / 3; }
+#seis { grid-area: 3 / 3 / 4 / 4; }
+#siete { grid-area: 4 / 1 / 5 / 2; }
+#ocho { grid-area: 4 / 2 / 5 / 3; }
+#nueve { grid-area: 4 / 3 / 5 / 4; }
+#punto { grid-area: 5 / 1 / 6 / 2; }
+#cero { grid-area: 5 / 2 / 6 / 3; }
+#igual { grid-area: 5 / 3 / 6 / 4; }
+#mas { grid-area: 5 / 4 / 6 / 5; }
+#menos { grid-area: 4 / 4 / 5 / 5; }
+#multiplicar { grid-area: 3 / 4 / 4 / 5; }
+#dividir { grid-area: 2 / 4 / 3 / 5; }
+#clear { grid-area: 1 / 4 / 2 / 5;
+    background-color: red;
+    width: 7rem;
+    height: 6rem;
+    border-radius: 9px;
+    border: solid;
+    margin-top: 2rem;
+    margin-left: -1rem;
+}
+#displaycontent{ justify-content: flex-end;
+    display: flex;
+    width: 19rem;
+    margin: auto;
+    font-size: 4rem;
+    font-family: myfont;
+    color: rgb(9, 172, 9);}
+
+.button{
+    background-color: cornsilk;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 90px;
+    border: solid;
+    text-align: center;
+    box-shadow: -5px -5px 10px -5px rgb(0 0 0);
+}
+.buttoncontainer{
+    justify-content: center;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+.buttontext{
+    font-size: 2rem;
+    margin-bottom: 0px;
+    padding-bottom: 2rem;
+    margin-top: 1.5rem;
+}
+#h2{
+    position: relative;
+    top: 15.3rem;
+}
+.buttoncontainer:hover{
+    transform: scale(1.2);
+}
+.buttoncontainer:active{ transform: scale(0.9);
+}
+.button:hover{
+    background-color: burlywood
+}
+#clear:hover{transform: scale(1.1);
+}
+#clear:active{ transform: scale(0.9);
 }
