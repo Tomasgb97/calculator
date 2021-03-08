@@ -63,23 +63,23 @@ punto.addEventListener('click',
 clear.addEventListener('click', clean);
 
         mas.addEventListener('click', function(){
-            num1 = Math.fround(parseFloat(displayContent.textContent));
+            num1 = parseFloat(displayContent.textContent);
             operator = '+' ; 
             displayContent.textContent = '';
         })
 
         menos.addEventListener('click', function(){
-            num1 = Math.fround(parseFloat(displayContent.textContent));
+            num1 = parseFloat(displayContent.textContent);
             operator = '-'
             displayContent.textContent = '';
         })
         multi.addEventListener('click', function(){
-            num1 = Math.fround(parseFloat(displayContent.textContent));
+            num1 = parseFloat(displayContent.textContent);
             operator = '*'
             displayContent.textContent = '';
         })
         divid.addEventListener('click', function(){
-            num1 =  Math.fround(parseFloat(displayContent.textContent));
+            num1 =  parseFloat(displayContent.textContent);
             operator = '/'
             displayContent.textContent ='';
         })
@@ -87,7 +87,7 @@ clear.addEventListener('click', clean);
 
         igual.addEventListener('click', function(){
 
-            num2 = Math.fround(parseFloat(displayContent.textContent));
+            num2 = parseFloat(displayContent.textContent);
 
             if(operator == '+'){
 
@@ -114,14 +114,14 @@ clear.addEventListener('click', clean);
         })
 
     function add (num1, num2) {
-        return Math.fround(parseFloat(num1 + num2));}
+        return parseFloat(num1 + num2);}
     
     function substract (num1, num2) {
-	    return Math.fround(parseFloat(num1 - num2));}
+	    return parseFloat(num1 - num2);}
     function multiply (num1, num2) {
-        return Math.fround(parseFloat(num1 * num2));}
+        return parseFloat(num1 * num2);}
     function divide (num1, num2) {
-        return Math.fround(parseFloat(num1 / num2));}
+        return parseFloat(num1 / num2);}
     function clean(){
         num1 = '';
         num2 = '';
