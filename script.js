@@ -19,6 +19,7 @@ const multi=   document.getElementById('multiplicar');
 const divid=   document.getElementById('dividir');
 
 const igual =  document.getElementById('igual');
+const clear =  document.getElementById('clear');
 
 let operator ='';
 let num1 ='';
@@ -59,25 +60,26 @@ cero.addEventListener('click',
 punto.addEventListener('click', 
     function(){ displayContent.textContent = 
         `${displayContent.textContent}.`,audio.currentTime = 0, audio.play()});
+clear.addEventListener('click', clean);
 
         mas.addEventListener('click', function(){
-            num1 = parseInt(displayContent.textContent);
+            num1 = Math.fround(parseFloat(displayContent.textContent));
             operator = '+' ; 
             displayContent.textContent = '';
         })
 
         menos.addEventListener('click', function(){
-            num1 = parseInt(displayContent.textContent);
+            num1 = Math.fround(parseFloat(displayContent.textContent));
             operator = '-'
             displayContent.textContent = '';
         })
         multi.addEventListener('click', function(){
-            num1 = parseInt(displayContent.textContent);
+            num1 = Math.fround(parseFloat(displayContent.textContent));
             operator = '*'
             displayContent.textContent = '';
         })
         divid.addEventListener('click', function(){
-            num1 = parseInt(displayContent.textContent);
+            num1 =  Math.fround(parseFloat(displayContent.textContent));
             operator = '/'
             displayContent.textContent ='';
         })
@@ -85,7 +87,7 @@ punto.addEventListener('click',
 
         igual.addEventListener('click', function(){
 
-            num2 = parseInt(displayContent.textContent);
+            num2 = Math.fround(parseFloat(displayContent.textContent));
 
             if(operator == '+'){
 
@@ -104,24 +106,25 @@ punto.addEventListener('click',
 
                 if(num2 !== 0){
                     return  displayContent.textContent = divide(num1, num2)
-                } else { return displayContent.textContent = `Don't try me`, clear}
-            } else if(num1 == ''){
-                return displayContent.textContent = 'Please enter a number first', clear
-            }
+                } else { return displayContent.textContent = `Don't try me`, clean}
+            } else if(isNaN(num1)){
+                return displayContent.textContent = 'Please enter a number first', clean
+}
             
         })
 
     function add (num1, num2) {
-        return (num1 + num2);}
+        return Math.fround(parseFloat(num1 + num2));}
     
     function substract (num1, num2) {
-	    return (num1 - num2);}
+	    return Math.fround(parseFloat(num1 - num2));}
     function multiply (num1, num2) {
-        return (num1 * num2);}
+        return Math.fround(parseFloat(num1 * num2));}
     function divide (num1, num2) {
-        return (num1 / num2);}
-    function clear(){
+        return Math.fround(parseFloat(num1 / num2));}
+    function clean(){
         num1 = '';
         num2 = '';
         operator = '';
+        displayContent.textContent = '';
     }
