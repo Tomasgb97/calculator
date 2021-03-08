@@ -18,6 +18,12 @@ const menos =  document.getElementById('menos');
 const multi=   document.getElementById('multiplicar');
 const divid=   document.getElementById('dividir');
 
+const igual =  document.getElementById('igual');
+
+let operator ='';
+let num1 ='';
+let num2 ='';
+
 
 uno.addEventListener('click', 
     function(){ displayContent.textContent = 
@@ -53,3 +59,69 @@ cero.addEventListener('click',
 punto.addEventListener('click', 
     function(){ displayContent.textContent = 
         `${displayContent.textContent}.`,audio.currentTime = 0, audio.play()});
+
+        mas.addEventListener('click', function(){
+            num1 = parseInt(displayContent.textContent);
+            operator = '+' ; 
+            displayContent.textContent = '';
+        })
+
+        menos.addEventListener('click', function(){
+            num1 = parseInt(displayContent.textContent);
+            operator = '-'
+            displayContent.textContent = '';
+        })
+        multi.addEventListener('click', function(){
+            num1 = parseInt(displayContent.textContent);
+            operator = '*'
+            displayContent.textContent = '';
+        })
+        divid.addEventListener('click', function(){
+            num1 = parseInt(displayContent.textContent);
+            operator = '/'
+            displayContent.textContent ='';
+        })
+
+
+        igual.addEventListener('click', function(){
+
+            num2 = parseInt(displayContent.textContent);
+
+            if(operator == '+'){
+
+                return displayContent.textContent = add(num1, num2);
+
+                
+            }else if(operator == '-'){
+
+                return displayContent.textContent = substract(num1, num2);
+
+            }else if(operator == '*'){
+
+                return displayContent.textContent = multiply(num1, num2);
+
+            }else if (operator == '/'){
+
+                if(num2 !== 0){
+                    return  displayContent.textContent = divide(num1, num2)
+                } else { return displayContent.textContent = `Don't try me`, clear}
+            } else if(num1 == ''){
+                return displayContent.textContent = 'Please enter a number first', clear
+            }
+            
+        })
+
+    function add (num1, num2) {
+        return (num1 + num2);}
+    
+    function substract (num1, num2) {
+	    return (num1 - num2);}
+    function multiply (num1, num2) {
+        return (num1 * num2);}
+    function divide (num1, num2) {
+        return (num1 / num2);}
+    function clear(){
+        num1 = '';
+        num2 = '';
+        operator = '';
+    }
