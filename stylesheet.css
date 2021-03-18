@@ -1,9 +1,4 @@
-@media only screen and (min-width: 600px){
 
-    html{
-        font-size: 1px;
-    }
-}
 
 @font-face{
     font-family: myfont;
@@ -154,3 +149,54 @@ overflow: hidden;
 }
 #clear:active{ transform: scale(0.9);
 }
+
+@media only screen and (max-width: 500px){
+
+    #calcucontainer{
+
+    position: relative;
+    top: 15vh;
+    right: 50vw;
+    left: 15vw;
+    height: 1000px;
+    width: 700px
+    }
+    .button{
+
+    height: 12vw;
+    width: 12vw;
+    }
+    .operand{
+
+    height: 120px;
+    width: 120px;
+    }
+    .buttontext{
+        font-size: 60px;
+    }
+    #display{
+
+    width: 70%;
+    height: 55%;
+    }
+    #clear{
+
+    position: relative;
+    left: 30%;
+    top: 15%;
+    }
+    #header{
+
+        font-size: 150px;
+    position: relative;
+    left: 0vw;
+    height: 0px;
+    }
+    #h2{
+
+    position: absolute;
+    top: 90vh;
+    font-size: 6vw;
+    }
+    }
+    
